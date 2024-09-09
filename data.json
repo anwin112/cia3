@@ -1,0 +1,76 @@
+{
+    "news": [
+      {
+        "id": 1,
+        "name": "BBC news",
+        "author": "Jane Smith",
+        "title": "dummy event 1",
+        "discription": "discription about dummy event 1",
+        "url": "url1",
+        "url_to_image": "imgurl1",
+        "published_at": "29.01.2004",
+        "content": "this is the full article content 1"
+
+      },
+      {
+        "id": 2,
+        "name": "BBC news2",
+        "author": "John Smith",
+        "title": "dummy event 2",
+        "discription": "discription about dummy event 2",
+        "url": "url2",
+        "url_to_image": "imgurl2",
+        "published_at": "29.01.2003",
+        "content": "this is the full article content 2"
+
+      },
+      {
+        "id": 3,
+        "name": "BBC news 3",
+        "author": "Jane Smith 3",
+        "title": "dummy event 3",
+        "discription": "discription about dummy event 3",
+        "url": "url3",
+        "url_to_image": "imgurl3",
+        "published_at": "29.01.2004 3",
+        "content": "this is the full article content 3"
+
+      },
+      {
+        "id": 4,
+        "name": "BBC news",
+        "author": "Jane Smith",
+        "title": "dummy event 4",
+        "discription": "discription about dummy event 4",
+        "url": "url1",
+        "url_to_image": "imgurl1",
+        "published_at": "29.01.2004",
+        "content": "this is the full article content 4"
+
+      },
+      {
+        "id": 5,
+        "name": "BBC news",
+        "author": "Jane Smith",
+        "title": "dummy event 5",
+        "discription": "discription about dummy event 5",
+        "url": "url1",
+        "url_to_image": "imgurl1",
+        "published_at": "29.01.2004",
+        "content": "this is the full article content 5"
+
+      },
+      {
+        "id": 6,
+        "name": "BBC news",
+        "author": "Jane Smith",
+        "title": "dummy event 6",
+        "discription": "discription about dummy event 6",
+        "url": "url1",
+        "url_to_image": "imgurl1",
+        "published_at": "29.01.2004",
+        "content": "this is the full article content 6"
+
+      }
+    ]
+}
