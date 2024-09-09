@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Add some basic styling to make the data look nicer */
+        .news-article {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="fetchjson">Get data from JSON</button>
+    <div class="mainContainer" id="mainContainer"></div>
+
+    <script>
+        // Replace this with the URL of your GitHub repository's JSON file
+        const jsonUrl = 'https://raw.githubusercontent.com/anwin112/cia3/main/data.json';
+
+        // Add an event listener to the button
+        document.getElementById('fetchjson').addEventListener('click', fetchData);
+
+        function fetchData() {
+            fetch(jsonUrl)
+                .then(response => response.json())
+                .then(data => displayData(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Function to display the data
+        function displayData(data) {
+            const mainContainer = document.getElementById('mainContainer');
+            mainContainer.innerHTML = '';
+
+            // Loop through each news article in the data
+            data.news.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('news-article');
+
+                // Create a header with the article title
+                const header = document.createElement('h2');
+                header.textContent = article.title;
+                articleDiv.appendChild(header);
+
+                // Create a paragraph with the article description
+                const description = document.createElement('p');
+                description.textContent = article.discription;
+                articleDiv.appendChild(description);
+
+                // Create a paragraph with the article author and published date
+                const authorAndDate = document.createElement('p');
+                authorAndDate.textContent = `By ${article.author} on ${article.published_at}`;
+                articleDiv.appendChild(authorAndDate);
+
+                // Create a link to the article URL
+                const link = document.createElement('a');
+                link.href = article.url;
+                link.textContent = 'Read more';
+                articleDiv.appendChild(link);
+
+                // Create an image with the article image URL
+                const image = document.createElement('img');
+                image.src = article.url_to_image;
+                image.alt = article.title;
+                articleDiv.appendChild(image);
+
+                mainContainer.appendChild(articleDiv);
+            });
+        }
+    </script>
+</body>
+</html>
